@@ -1,0 +1,91 @@
+{
+  "name": "DB_news",
+  "options": {
+    "idInjection": false,
+    "mysql": {
+      "schema": "sans_taxigo",
+      "table": "news"
+    }
+  },
+  "properties": {
+    "id": {
+      "type": "Number",
+      "required": false,
+      "precision": 10,
+      "scale": 0,
+      "id": 1,
+      "mysql": {
+        "columnName": "id",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "title": {
+      "type": "String",
+      "required": false,
+      "length": 1024,
+      "mysql": {
+        "columnName": "title",
+        "dataType": "varchar",
+        "dataLength": 1024,
+        "nullable": "N"
+      }
+    },
+    "content": {
+      "type": "String",
+      "required": false,
+      "length": 4294967295,
+      "mysql": {
+        "columnName": "content",
+        "dataType": "longtext",
+        "dataLength": 4294967295,
+        "nullable": "N"
+      }
+    },
+    "publish_since": {
+      "type": "Date",
+      "required": false,
+      "mysql": {
+        "columnName": "publish_since",
+        "dataType": "datetime",
+        "nullable": "N"
+      }
+    },
+    "publish_till": {
+      "type": "Date",
+      "required": false,
+      "mysql": {
+        "columnName": "publish_till",
+        "dataType": "datetime",
+        "nullable": "Y"
+      }
+    },
+    "image": {
+      "type": "String",
+      "required": false,
+      "length": 1024,
+      "mysql": {
+        "columnName": "image",
+        "dataType": "varchar",
+        "dataLength": 1024,
+        "nullable": "N"
+      }
+    },
+    "realm": {
+      "type": "String",
+      "required": false,
+      "length": 255,
+      "mysql": {
+        "columnName": "realm",
+        "dataType": "varchar",
+        "dataLength": 255,
+        "nullable": "Y"
+      }
+    }
+  },
+  "base": "PersistedModel",
+  "acls": [],
+  "relations": {}
+}

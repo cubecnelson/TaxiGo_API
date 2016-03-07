@@ -1,0 +1,282 @@
+{
+  "name": "DB_view_order_driver",
+  "options": {
+    "idInjection": false,
+    "mysql": {
+      "schema": "sans_taxigo",
+      "table": "view_order_driver"
+    }
+  },
+  "properties": {
+    "id": {
+      "type": "Number",
+      "required": false,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "id",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "status": {
+      "type": "Number",
+      "required": false,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "status",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "driver_id": {
+      "type": "Number",
+      "required": false,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "driver_id",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "assigned_driver_id": {
+      "type": "Number",
+      "required": false,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "assigned_driver_id",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "passenger_id": {
+      "type": "Number",
+      "required": false,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "passenger_id",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "confirm_id": {
+      "type": "Number",
+      "required": false,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "confirm_id",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "confirm_type": {
+      "type": "String",
+      "required": false,
+      "length": 255,
+      "mysql": {
+        "columnName": "confirm_type",
+        "dataType": "varchar",
+        "dataLength": 255,
+        "nullable": "N"
+      }
+    },
+    "reject_id": {
+      "type": "String",
+      "required": false,
+      "length": 65535,
+      "mysql": {
+        "columnName": "reject_id",
+        "dataType": "text",
+        "dataLength": 65535,
+        "nullable": "N"
+      }
+    },
+    "reject_type": {
+      "type": "String",
+      "required": false,
+      "length": 255,
+      "mysql": {
+        "columnName": "reject_type",
+        "dataType": "varchar",
+        "dataLength": 255,
+        "nullable": "N"
+      }
+    },
+    "starting_point": {
+      "type": "String",
+      "required": false,
+      "length": 255,
+      "mysql": {
+        "columnName": "starting_point",
+        "dataType": "varchar",
+        "dataLength": 255,
+        "nullable": "N"
+      }
+    },
+    "destination": {
+      "type": "String",
+      "required": false,
+      "length": 255,
+      "mysql": {
+        "columnName": "destination",
+        "dataType": "varchar",
+        "dataLength": 255,
+        "nullable": "N"
+      }
+    },
+    "send_time": {
+      "type": "Date",
+      "required": false,
+      "mysql": {
+        "columnName": "send_time",
+        "dataType": "datetime",
+        "nullable": "N"
+      }
+    },
+    "complete_time": {
+      "type": "Date",
+      "required": false,
+      "mysql": {
+        "columnName": "complete_time",
+        "dataType": "datetime",
+        "nullable": "N"
+      }
+    },
+    "rating": {
+      "type": "Number",
+      "required": false,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "rating",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "waitting_id": {
+      "type": "Number",
+      "required": false,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "waitting_id",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "require_vip": {
+      "type": "Number",
+      "required": false,
+      "precision": 3,
+      "scale": 0,
+      "mysql": {
+        "columnName": "require_vip",
+        "dataType": "tinyint",
+        "dataPrecision": 3,
+        "dataScale": 0,
+        "nullable": "Y"
+      }
+    },
+    "memo": {
+      "type": "String",
+      "required": false,
+      "length": 1024,
+      "mysql": {
+        "columnName": "memo",
+        "dataType": "varchar",
+        "dataLength": 1024,
+        "nullable": "N"
+      }
+    },
+    "driver_order_status": {
+      "type": "String",
+      "required": false,
+      "length": 45,
+      "mysql": {
+        "columnName": "driver_order_status",
+        "dataType": "varchar",
+        "dataLength": 45,
+        "nullable": "Y"
+      }
+    },
+    "distributor_status": {
+      "type": "String",
+      "required": false,
+      "length": 45,
+      "mysql": {
+        "columnName": "distributor_status",
+        "dataType": "varchar",
+        "dataLength": 45,
+        "nullable": "Y"
+      }
+    },
+    "start_x": {
+      "type": "Number",
+      "required": false,
+      "precision": 22,
+      "mysql": {
+        "columnName": "start_x",
+        "dataType": "double",
+        "dataPrecision": 22,
+        "nullable": "Y"
+      }
+    },
+    "start_y": {
+      "type": "Number",
+      "required": false,
+      "precision": 22,
+      "mysql": {
+        "columnName": "start_y",
+        "dataType": "double",
+        "dataPrecision": 22,
+        "nullable": "Y"
+      }
+    },
+    "end_x": {
+      "type": "Number",
+      "required": false,
+      "precision": 22,
+      "mysql": {
+        "columnName": "end_x",
+        "dataType": "double",
+        "dataPrecision": 22,
+        "nullable": "Y"
+      }
+    },
+    "end_y": {
+      "type": "Number",
+      "required": false,
+      "precision": 22,
+      "mysql": {
+        "columnName": "end_y",
+        "dataType": "double",
+        "dataPrecision": 22,
+        "nullable": "Y"
+      }
+    }
+  },
+  "base": "PersistedModel",
+  "acls": [],
+  "relations": {}
+}

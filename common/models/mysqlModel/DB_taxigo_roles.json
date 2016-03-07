@@ -1,0 +1,69 @@
+{
+  "name": "DB_taxigo_roles",
+  "options": {
+    "idInjection": false,
+    "mysql": {
+      "schema": "sans_taxigo",
+      "table": "taxigo_roles"
+    }
+  },
+  "properties": {
+    "id": {
+      "type": "Number",
+      "required": false,
+      "precision": 10,
+      "scale": 0,
+      "id": 1,
+      "mysql": {
+        "columnName": "id",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "name": {
+      "type": "String",
+      "required": false,
+      "length": 255,
+      "mysql": {
+        "columnName": "name",
+        "dataType": "varchar",
+        "dataLength": 255,
+        "nullable": "Y"
+      }
+    },
+    "description": {
+      "type": "String",
+      "required": false,
+      "length": 65535,
+      "mysql": {
+        "columnName": "description",
+        "dataType": "text",
+        "dataLength": 65535,
+        "nullable": "Y"
+      }
+    },
+    "created": {
+      "type": "Date",
+      "required": false,
+      "mysql": {
+        "columnName": "created",
+        "dataType": "datetime",
+        "nullable": "Y"
+      }
+    },
+    "modified": {
+      "type": "Date",
+      "required": false,
+      "mysql": {
+        "columnName": "modified",
+        "dataType": "datetime",
+        "nullable": "Y"
+      }
+    }
+  },
+  "base": "PersistedModel",
+  "acls": [],
+  "relations": {}
+}

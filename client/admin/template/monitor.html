@@ -1,0 +1,101 @@
+  
+    <map id="main-monitor" center="22.33943435222082,114.15292732836918" zoom="12" style="position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;" >
+      <!--<marker ng-repeat="driver in C.driversList.drivers track by driver.id" position="{{driver.loc_x}},{{driver.loc_y}}" icon="{
+        url:'images/driver-pin.png', 
+        scaledSize:[30,30],
+        size: [30,30],
+        origin: [0,0],
+        anchor: [15,15]
+      }">
+        <div><b>Driver{{driver.id}}</b></div>
+      </marker>-->
+      <!-- <traffic-layer></traffic-layer> -->
+      <marker ng-repeat="driver in C.driversList.drivers | filter:C.filters.onlineDrivers track by driver.id" position="{{driver.loc_x}},{{driver.loc_y}}" title="{{'司機: '+driver.id+'號 '+driver.name}}" icon="{
+        url:'images/driver-pin.png',
+        size:[38,38],
+        origin:[0,0],
+        anchor:[19,19]
+      }" on-click="C.distributeOrder(undefined,driver)">
+      </marker>
+      <marker animation="DROP" ng-repeat="order in C.requestList.orders track by order.id" position="{{C.pointToAddress(order.starting_point).loc_x}},{{C.pointToAddress(order.starting_point).loc_y}}" icon="{
+        url:'images/order-pin.png', 
+        scaledSize:[57,67],
+        size: [73,86],
+        origin: [0,0],
+        anchor: [35,75]
+      }" on-click="C.distributeOrder(order,undefined)">
+        
+      </marker>
+    </map>
+    <div id="avaliable-orders-table" class="floating-tables" style="top:0;left:0;position:absolute;background:rgba(255,255,255,0.8)">
+      <div class="title">Incomming orders</div>
+      <table st-table="avaliableOrders"  st-safe-src="C.requestList.orders" class="table table-striped">
+        <thead>
+        <tr>
+          <th st-sort="id">id</th>
+          <th st-sort="name">乘客</th>
+          <th st-sort="driver_id">司機</th>
+          <th st-sort="country_code">電話</th>
+          <th>上車地點</th>
+          <th>自動派單</th>
+          <th>備註</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="row in avaliableOrders track by row.id" ng-click="C.distributeOrder(row,undefined)" ng-class="{selected:C.selectedOrder.indexOf(order.id)>-1}">
+          <td>{{row.id}}</td>
+          <td>{{row.name}}</td>
+          <td>{{row.driver_id||'未指派'}}</td>
+          <td>{{'+'+row.country_code+' '+row.tel}}</td>
+          <td>{{C.pointToAddress(row.starting_point).first_desc||'loading'}}</td>
+          <td>{{row.distributor_status}}</td>
+          <td><i class="fa fa-taxi" ng-class="{oriange:C.selectedDriver.indexOf(driver.id)>-1}" style="{{row.require_vip==1?'color:#ee6633':''}}" ng-if="row.require_vip==1"></i>{{row.memo||' '}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="selectedInfo" class="floating-tables" style="left:50%;top:0;position:absolute;width:200px;background:rgba(255,255,255,0.8);margin-left:-100px;">
+      <table style="width:100%;">
+        <thead>
+          <th>訂單</th>
+          <th>司機</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{C.orderCache.order.id || '未指定'}}</td>  
+            <td>{{C.orderCache.driver.id || '未指定'}}</td>
+          </tr>
+        </tbody>
+      </table>
+      
+    </div>
+    <div id="drivers" class="floating-tables" style="top:0;right:0;position:absolute;background:rgba(255,255,255,0.8)">
+      <table st-table="avaliableDrivers" st-safe-src="C.driversList.drivers " class="table table-striped">
+        <thead>
+        <tr>
+          <th st-sort="id">id</th>
+          <th st-sort="name">名字</th>
+          <th st-sort="phone">電話</th>
+          <th st-sort="license">車牌</th>
+        </tr>
+<!--         <tr>
+          <th colspan="5"><input st-search="" class="form-control" placeholder="global search ..." type="text"/></th>
+        </tr> -->
+        </thead>
+        <tbody>
+        <tr ng-repeat="row in avaliableDrivers | filter:C.filters.vipDrivers track by row.id" ng-click="C.distributeOrder(undefined,row)" ng-class="{selected:C.selectedDriver.indexOf(driver.id)>-1}">
+          <td>{{row.id}}</td>
+          <td>{{row.name}}</td>
+          <td>{{row.country_code+' '+row.phone}}</td>
+          <td>{{row.license}}</td>
+          <td>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>

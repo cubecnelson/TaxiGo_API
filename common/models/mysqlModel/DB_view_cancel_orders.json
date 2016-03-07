@@ -1,0 +1,105 @@
+{
+  "name": "DB_view_cancel_orders",
+  "options": {
+    "idInjection": false,
+    "mysql": {
+      "schema": "sans_taxigo",
+      "table": "view_cancel_orders"
+    }
+  },
+  "properties": {
+    "id": {
+      "type": "Number",
+      "required": false,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "id",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "starting_point": {
+      "type": "String",
+      "required": false,
+      "length": 255,
+      "mysql": {
+        "columnName": "starting_point",
+        "dataType": "varchar",
+        "dataLength": 255,
+        "nullable": "N"
+      }
+    },
+    "destination": {
+      "type": "String",
+      "required": false,
+      "length": 255,
+      "mysql": {
+        "columnName": "destination",
+        "dataType": "varchar",
+        "dataLength": 255,
+        "nullable": "N"
+      }
+    },
+    "driver_id": {
+      "type": "Number",
+      "required": false,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "driver_id",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "country_code": {
+      "type": "String",
+      "required": false,
+      "length": 10,
+      "mysql": {
+        "columnName": "country_code",
+        "dataType": "varchar",
+        "dataLength": 10,
+        "nullable": "N"
+      }
+    },
+    "tel": {
+      "type": "String",
+      "required": false,
+      "length": 200,
+      "mysql": {
+        "columnName": "tel",
+        "dataType": "varchar",
+        "dataLength": 200,
+        "nullable": "N"
+      }
+    },
+    "name": {
+      "type": "String",
+      "required": false,
+      "length": 255,
+      "mysql": {
+        "columnName": "name",
+        "dataType": "varchar",
+        "dataLength": 255,
+        "nullable": "N"
+      }
+    },
+    "send_time": {
+      "type": "Date",
+      "required": false,
+      "mysql": {
+        "columnName": "send_time",
+        "dataType": "datetime",
+        "nullable": "N"
+      }
+    }
+  },
+  "base": "PersistedModel",
+  "acls": [],
+  "relations": {}
+}

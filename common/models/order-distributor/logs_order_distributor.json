@@ -1,0 +1,60 @@
+{
+  "name": "logs_order_distributor",
+  "options": {
+    "idInjection": false,
+    "mysql": {
+      "schema": "sans_taxigo",
+      "table": "logs_order_distributor"
+    }
+  },
+  "properties": {
+    "order_id": {
+      "type": "Number",
+      "required": false,
+      "precision": 10,
+      "scale": 0,
+      "id": 1,
+      "mysql": {
+        "columnName": "order_id",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "touched_drivers": {
+      "type": "String",
+      "required": false,
+      "length": 65535,
+      "mysql": {
+        "columnName": "touched_drivers",
+        "dataType": "text",
+        "dataLength": 65535,
+        "nullable": "Y"
+      }
+    },
+    "taken_by": {
+      "type": "Number",
+      "required": false,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "taken_by",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "Y"
+      }
+    },
+    "timestamp": {
+      "type": "Date",
+      "required": false,
+      "mysql": {
+        "columnName": "timestamp",
+        "dataType": "timestamp",
+        "nullable": "Y"
+      }
+    }
+  },
+  "base": "PersistedModel"
+}

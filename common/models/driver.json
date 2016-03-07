@@ -1,0 +1,378 @@
+{
+  "name": "driver",
+  "plural": "driver",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true,
+    "idInjection": false,
+    "mysql": {
+      "schema": "sans_taxigo",
+      "table": "driver"
+    }
+  },
+  "hidden": [
+    "verification",
+    "gift_points",
+    "user_token"
+  ],
+  "properties": {
+    "id": {
+      "type": "Number",
+      "id": 1,
+      "required": false,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "id",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "name": {
+      "type": "String",
+      "required": false,
+      "length": 255,
+      "mysql": {
+        "columnName": "name",
+        "dataType": "varchar",
+        "dataLength": 255,
+        "nullable": "N"
+      }
+    },
+    "loc_x": {
+      "type": "Number",
+      "required": false,
+      "precision": 22,
+      "mysql": {
+        "columnName": "loc_x",
+        "dataType": "double",
+        "dataPrecision": 22,
+        "nullable": "N"
+      }
+    },
+    "loc_y": {
+      "type": "Number",
+      "required": false,
+      "precision": 22,
+      "mysql": {
+        "columnName": "loc_y",
+        "dataType": "double",
+        "dataPrecision": 22,
+        "nullable": "N"
+      }
+    },
+    "loc_str": {
+      "type": "String",
+      "required": false,
+      "length": 65535,
+      "mysql": {
+        "columnName": "loc_str",
+        "dataType": "text",
+        "dataLength": 65535,
+        "nullable": "N"
+      }
+    },
+    "during": {
+      "type": "Number",
+      "required": false,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "during",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "ref_index": {
+      "type": "Number",
+      "required": false,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "ref_index",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "direction": {
+      "type": "String",
+      "required": false,
+      "length": 255,
+      "mysql": {
+        "columnName": "direction",
+        "dataType": "varchar",
+        "dataLength": 255,
+        "nullable": "N"
+      }
+    },
+    "status": {
+      "type": "String",
+      "required": false,
+      "length": 3,
+      "mysql": {
+        "columnName": "status",
+        "dataType": "varchar",
+        "dataLength": 3,
+        "nullable": "N"
+      }
+    },
+    "logofftime": {
+      "type": "Date",
+      "required": false,
+      "mysql": {
+        "columnName": "logofftime",
+        "dataType": "datetime",
+        "nullable": "N"
+      }
+    },
+    "waitting_id": {
+      "type": "String",
+      "required": false,
+      "length": 255,
+      "mysql": {
+        "columnName": "waitting_id",
+        "dataType": "varchar",
+        "dataLength": 255,
+        "nullable": "N"
+      }
+    },
+    "phone": {
+      "type": "Number",
+      "required": false,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "phone",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "license": {
+      "type": "String",
+      "required": false,
+      "length": 255,
+      "mysql": {
+        "columnName": "license",
+        "dataType": "varchar",
+        "dataLength": 255,
+        "nullable": "N"
+      }
+    },
+    "image": {
+      "type": "String",
+      "required": false,
+      "length": 255,
+      "mysql": {
+        "columnName": "image",
+        "dataType": "varchar",
+        "dataLength": 255,
+        "nullable": "N"
+      }
+    },
+    "driver_type": {
+      "type": "String",
+      "required": false,
+      "length": 2,
+      "mysql": {
+        "columnName": "driver_type",
+        "dataType": "varchar",
+        "dataLength": 2,
+        "nullable": "N"
+      }
+    },
+    "last_update": {
+      "type": "Date",
+      "required": false,
+      "mysql": {
+        "columnName": "last_update",
+        "dataType": "datetime",
+        "nullable": "N"
+      }
+    },
+    "device_id": {
+      "type": "String",
+      "required": false,
+      "length": 255,
+      "mysql": {
+        "columnName": "device_id",
+        "dataType": "varchar",
+        "dataLength": 255,
+        "nullable": "N"
+      }
+    },
+    "verification": {
+      "type": "String",
+      "required": false,
+      "length": 25,
+      "mysql": {
+        "columnName": "verification",
+        "dataType": "varchar",
+        "dataLength": 25,
+        "nullable": "N"
+      }
+    },
+    "user_token": {
+      "type": "String",
+      "required": false,
+      "length": 512,
+      "mysql": {
+        "columnName": "user_token",
+        "dataType": "varchar",
+        "dataLength": 512,
+        "nullable": "N"
+      }
+    },
+    "country_code": {
+      "type": "String",
+      "required": false,
+      "length": 10,
+      "mysql": {
+        "columnName": "country_code",
+        "dataType": "varchar",
+        "dataLength": 10,
+        "nullable": "N"
+      }
+    },
+    "tel": {
+      "type": "String",
+      "required": false,
+      "length": 100,
+      "mysql": {
+        "columnName": "tel",
+        "dataType": "varchar",
+        "dataLength": 100,
+        "nullable": "N"
+      }
+    },
+    "given_name": {
+      "type": "String",
+      "required": false,
+      "length": 255,
+      "mysql": {
+        "columnName": "given_name",
+        "dataType": "varchar",
+        "dataLength": 255,
+        "nullable": "N"
+      }
+    },
+    "family_name": {
+      "type": "String",
+      "required": false,
+      "length": 255,
+      "mysql": {
+        "columnName": "family_name",
+        "dataType": "varchar",
+        "dataLength": 255,
+        "nullable": "N"
+      }
+    },
+    "gift_points": {
+      "type": "Number",
+      "required": false,
+      "precision": 22,
+      "mysql": {
+        "columnName": "gift_points",
+        "dataType": "double",
+        "dataPrecision": 22,
+        "nullable": "Y"
+      }
+    },
+    "userId": {
+      "type": "Number",
+      "required": false,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "userId",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "Y"
+      }
+    }
+  },
+  "validations": [],
+  "relations": {
+    "user": {
+      "type": "belongsTo",
+      "model": "taxiGoUsers",
+      "foreignKey": "userId"
+    }
+  },
+  "acls": [
+    {
+      "principalType": "ROLE",
+      "principalId": "$unauthenticated",
+      "permission": "DENY"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "genVerificationCode"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "verifyVerificationCode"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "READ",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "DENY"
+    },
+    {
+      "accessType": "WRITE",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "DENY"
+    },
+    {
+      "accessType": "READ",
+      "principalType": "ROLE",
+      "principalId": "admin",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "WRITE",
+      "principalType": "ROLE",
+      "principalId": "admin",
+      "permission": "ALLOW"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "$owner",
+      "permission": "ALLOW",
+      "property": "findById"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "$owner",
+      "permission": "ALLOW",
+      "property": "__get__taxiGoUsers"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "$owner",
+      "permission": "ALLOW",
+      "property": "updateAttributes"
+    }
+  ],
+  "methods": {}
+}

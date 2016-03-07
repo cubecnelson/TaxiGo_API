@@ -1,0 +1,43 @@
+{
+  "name": "TaxiGo",
+  "version": "1.0.5",
+  "main": "server/server.js",
+  "scripts": {
+    "pretest": "jshint ."
+  },
+  "dependencies": {
+    "async": "^1.5.0",
+    "body-parser": "^1.14.1",
+    "busboy": "^0.2.11",
+    "compression": "^1.0.3",
+    "cors": "^2.5.2",
+    "debug": "^2.2.0",
+    "event-stream": "^3.3.1",
+    "loopback": "^2.22.0",
+    "loopback-boot": "^2.6.5",
+    "loopback-component-explorer": "^2.1.0",
+    "loopback-component-push": "^1.5.1",
+    "loopback-component-storage": "^1.5.1",
+    "loopback-connector-mongodb": "^1.13.1",
+    "loopback-connector-mysql": "^2.2.0",
+    "loopback-datasource-juggler": "^2.39.0",
+    "multer": "^1.0.5",
+    "query-string": "^2.4.2",
+    "request-promise": "^0.4.3",
+    "serve-favicon": "^2.0.1",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "bluebird": "^2.10.1",
+    "grunt": "^0.4.5",
+    "jasmine": "^2.3.2",
+    "jshint": "^2.5.6",
+    "request": "^2.64.0",
+    "request-promise": "^0.4.3"
+  },
+  "repository": {
+    "type": "",
+    "url": ""
+  },
+  "description": "TaxiGo API base on Loopback."
+}

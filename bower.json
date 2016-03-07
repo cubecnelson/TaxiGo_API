@@ -1,0 +1,44 @@
+{
+  "name": "TaxiGo",
+  "description": "TaxiGo API base on Loopback.",
+  "main": "server/server.js",
+  "authors": [
+    "Yuen Shing <y.shing@me.com>"
+  ],
+  "license": "C",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-bootstrap": "0.13.4",
+    "angular-file-upload": "~2.2.0",
+    "angular-numeraljs": "~1.1.6",
+    "angular-resource": "~1.4.7",
+    "angular-sanitize": "~1.4.7",
+    "angular-ui-codemirror": "~0.3.0",
+    "angular-ui-router": "~0.2.15",
+    "angular": "~1.4.7",
+    "humane-js": "humane#~3.2.2",
+    "jsonlint": "~1.6.0",
+    "lodash": "~3.10.1",
+    "ng-admin": "~0.9.1",
+    "ng-file-upload": "~9.1.1",
+    "ngInflection": "~1.1.10",
+    "ngprogress": "~1.1.2",
+    "papaparse": "~4.1.2",
+    "restangular": "~1.5.1",
+    "textAngular": "~1.4.6",
+    "ui-select": "angular-ui/ui-select#271bf6a03078587c5afdb05f61e826573a13d348",
+    "ng-maps": "ng-map#*",
+    "ngmap": "~1.13.15",
+    "jquery": "~2.1.4",
+    "angular-smart-table": "~2.1.4"
+  }
+}

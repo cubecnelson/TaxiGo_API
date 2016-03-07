@@ -1,0 +1,216 @@
+{
+  "name": "DB_taxigouser",
+  "options": {
+    "idInjection": false,
+    "mysql": {
+      "schema": "sans_taxigo",
+      "table": "taxigouser"
+    }
+  },
+  "properties": {
+    "id": {
+      "type": "Number",
+      "required": false,
+      "precision": 10,
+      "scale": 0,
+      "id": 1,
+      "mysql": {
+        "columnName": "id",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "realm": {
+      "type": "String",
+      "required": false,
+      "length": 45,
+      "mysql": {
+        "columnName": "realm",
+        "dataType": "varchar",
+        "dataLength": 45,
+        "nullable": "N"
+      }
+    },
+    "username": {
+      "type": "String",
+      "required": false,
+      "length": 45,
+      "mysql": {
+        "columnName": "username",
+        "dataType": "varchar",
+        "dataLength": 45,
+        "nullable": "N"
+      }
+    },
+    "password": {
+      "type": "String",
+      "required": false,
+      "length": 512,
+      "mysql": {
+        "columnName": "password",
+        "dataType": "varchar",
+        "dataLength": 512,
+        "nullable": "N"
+      }
+    },
+    "email": {
+      "type": "String",
+      "required": false,
+      "length": 255,
+      "mysql": {
+        "columnName": "email",
+        "dataType": "varchar",
+        "dataLength": 255,
+        "nullable": "N"
+      }
+    },
+    "emailVerified": {
+      "type": "Number",
+      "required": false,
+      "precision": 3,
+      "scale": 0,
+      "mysql": {
+        "columnName": "emailVerified",
+        "dataType": "tinyint",
+        "dataPrecision": 3,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "verificationToken": {
+      "type": "String",
+      "required": false,
+      "length": 45,
+      "mysql": {
+        "columnName": "verificationToken",
+        "dataType": "varchar",
+        "dataLength": 45,
+        "nullable": "N"
+      }
+    },
+    "status": {
+      "type": "String",
+      "required": false,
+      "length": 45,
+      "mysql": {
+        "columnName": "status",
+        "dataType": "varchar",
+        "dataLength": 45,
+        "nullable": "N"
+      }
+    },
+    "created": {
+      "type": "Date",
+      "required": false,
+      "mysql": {
+        "columnName": "created",
+        "dataType": "datetime",
+        "nullable": "N"
+      }
+    },
+    "lastUpdated": {
+      "type": "Date",
+      "required": false,
+      "mysql": {
+        "columnName": "lastUpdated",
+        "dataType": "datetime",
+        "nullable": "N"
+      }
+    },
+    "country_code": {
+      "type": "String",
+      "required": false,
+      "length": 10,
+      "mysql": {
+        "columnName": "country_code",
+        "dataType": "varchar",
+        "dataLength": 10,
+        "nullable": "N"
+      }
+    },
+    "tel": {
+      "type": "String",
+      "required": false,
+      "length": 45,
+      "mysql": {
+        "columnName": "tel",
+        "dataType": "varchar",
+        "dataLength": 45,
+        "nullable": "N"
+      }
+    },
+    "realm_id": {
+      "type": "Number",
+      "required": false,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "realm_id",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "gift_points": {
+      "type": "Number",
+      "required": false,
+      "precision": 22,
+      "mysql": {
+        "columnName": "gift_points",
+        "dataType": "double",
+        "dataPrecision": 22,
+        "nullable": "Y"
+      }
+    },
+    "family_name": {
+      "type": "String",
+      "required": false,
+      "length": 255,
+      "mysql": {
+        "columnName": "family_name",
+        "dataType": "varchar",
+        "dataLength": 255,
+        "nullable": "N"
+      }
+    },
+    "given_name": {
+      "type": "String",
+      "required": false,
+      "length": 255,
+      "mysql": {
+        "columnName": "given_name",
+        "dataType": "varchar",
+        "dataLength": 255,
+        "nullable": "N"
+      }
+    },
+    "name": {
+      "type": "String",
+      "required": false,
+      "length": 510,
+      "mysql": {
+        "columnName": "name",
+        "dataType": "varchar",
+        "dataLength": 510,
+        "nullable": "N"
+      }
+    },
+    "title": {
+      "type": "String",
+      "required": false,
+      "length": 45,
+      "mysql": {
+        "columnName": "title",
+        "dataType": "varchar",
+        "dataLength": 45,
+        "nullable": "N"
+      }
+    }
+  },
+  "base": "PersistedModel",
+  "acls": [],
+  "relations": {}
+}

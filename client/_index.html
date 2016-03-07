@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html ng-app="TaxiGO">
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>TaxiGO system monitor</title>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosanstc.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/angularjs-toaster/0.4.15/toaster.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="admin/css/style.css"> -->
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        font-family:"Helvetica Neue",Helvetica,Arial,'Noto Sans TC',sans-serif;
+      }
+      #map {
+        height: 100%;
+      }
+      .nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+      .floating-tables{
+        position: absolute;
+        background: rgba(255,255,255,0.5);
+      }
+      .floating-tables .title{
+        background-color: rgb(233,84,41);
+        text-align: center;
+        font-size:14px;
+        line-height: 2em;
+        color:white;
+      }
+    </style>
+  </head>
+  <body ng-controller="mainAdminPanelController as C">
+  <div id="map" map-lazy-load="http://maps.google.com/maps/api/js">
+    <map center="22.33943435222082,114.15292732836918" zoom="12" style="height:100%">
+      <!--<marker ng-repeat="driver in C.driversList.drivers track by driver.id" position="{{driver.loc_x}},{{driver.loc_y}}" icon="{
+        url:'images/driver-pin.png', 
+        scaledSize:[30,30],
+        size: [30,30],
+        origin: [0,0],
+        anchor: [15,15]
+      }">
+        <div><b>Driver{{driver.id}}</b></div>
+      </marker>-->
+      <!-- <traffic-layer></traffic-layer> -->
+      <marker ng-repeat="driver in C.driversList.drivers track by driver.id" position="{{driver.loc_x}},{{driver.loc_y}}" title="{{'司機: '+driver.id+'號 '+driver.name}}" icon="{
+        url:'images/driver-pin.png',
+        size:[38,38],
+        origin:[0,0],
+        anchor:[19,19]
+      }">
+      </marker>
+      <marker animation="DROP" ng-repeat="order in C.requestList.orders track by order.id" position="{{C.pointToAddress(order.starting_point).loc_x}},{{C.pointToAddress(order.starting_point).loc_y}}" icon="{
+        url:'images/order-pin.png', 
+        scaledSize:[57,67],
+        size: [73,86],
+        origin: [0,0],
+        anchor: [35,75]
+      }">
+        
+      </marker>
+    </map>
+    <div id="avaliable-orders-table" class="floating-tables" style="top:0;left:0;">
+      <div class="title">Incomming orders</div>
+      <table st-table="avaliableOrders" st-safe-src="C.requestList.orders" class="table table-striped">
+        <thead>
+        <tr>
+          <th st-sort="id">id</th>
+          <th st-sort="firstName">乘客</th>
+          <th st-sort="lastName">司機</th>
+          <th st-sort="birthDate">電話</th>
+          <th st-sort="balance">上車地點</th>
+        </tr>
+        <tr>
+          <th colspan="5"><input st-search="" class="form-control" placeholder="global search ..." type="text"/></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="row in avaliableOrders track by row.id">
+          <td>{{row.id}}</td>
+          <td>{{row.firstName}}</td>
+          <td>{{row.lastName}}</td>
+          <td>{{row.birthDate}}</td>
+          <td>{{row.balance}}</td>
+          <td>
+          <button type="button" ng-click="removeItem(row)" class="btn btn-sm btn-danger">
+            <i class="glyphicon glyphicon-remove-circle">
+            </i>
+          </button>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div id="drivers" class="floating-tables" style="top:0;right:0">
+      <table st-table="avaliableDrivers" st-safe-src="C.driversList.drivers" class="table table-striped">
+        <thead>
+        <tr>
+          <th st-sort="id">id</th>
+          <th st-sort="name">名字</th>
+          <th st-sort="phone">電話</th>
+          <th st-sort="license">車牌</th>
+        </tr>
+        <tr>
+          <th colspan="5"><input st-search="" class="form-control" placeholder="global search ..." type="text"/></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="row in avaliableDrivers track by row.id">
+          <td>{{row.id}}</td>
+          <td>{{row.name}}</td>
+          <td>{{row.country_code+' '+row.phone}}</td>
+          <td>{{row.license}}</td>
+          <td>
+         <!--  <button type="button" ng-click="removeItem(row)" class="btn btn-sm btn-danger">
+            <i class="glyphicon glyphicon-remove-circle">
+            </i>
+          </button> -->
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+    <!-- <div id="map"></div> -->
+    <script>
+    // function initMap() {
+    //   var map = new google.maps.Map(document.getElementById('map'), {zoom: 12});
+    //   window.myGoogleMap = map;
+    //   var geocoder = new google.maps.Geocoder;
+    //   geocoder.geocode({'address': 'Hong Kong'}, function(results, status) {
+    //     if (status === google.maps.GeocoderStatus.OK) {
+    //       map.setCenter(results[0].geometry.location);
+    //       new google.maps.Marker({
+    //         map: map,
+    //         position: results[0].geometry.location
+    //       });
+    //     } else {
+    //       window.alert('Geocode was not successful for the following reason: ' +
+    //           status);
+    //     }
+    //   });
+    //   // ((22.1263550610246, 113.79192345263675), (22.552513643417036, 114.5139312041016))
+    //   var allowedBounds = new google.maps.LatLngBounds(
+    //        new google.maps.LatLng(22.1263550610246, 113.79192345263675), 
+    //        new google.maps.LatLng(22.552513643417036, 114.5139312041016)
+    //   );
+    //   var lastValidCenter = map.getCenter();
+
+    //   google.maps.event.addListener(map, 'center_changed', function() {
+    //       if (allowedBounds.contains(map.getCenter())) {
+    //           // still within valid bounds, so save the last valid position
+    //           lastValidCenter = map.getCenter();
+    //           return; 
+    //       }
+
+    //       // not valid anymore => return to last valid position
+    //       map.panTo(lastValidCenter);
+    //   });
+      
+    // }
+
+    </script>
+
+    <script type="text/javascript" src="js/underscore.js"></script>
+    <script type="text/javascript" src="assets/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="assets/bootstrap/js/bootstrap.js"></script>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-animate.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-resource.min.js"></script>
+    <script type="text/javascript" src="assets/ui-bootstrap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angularjs-toaster/0.4.15/toaster.min.js"></script>
+     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-resource.min.js"></script>
+    <script type="text/javascript" src="js/ng-map.js"></script>
+    <script type="text/javascript" src="js/liveSet.js"></script>
+    <script type="text/javascript" src="js/lb-services.js"></script>
+    <script type="text/javascript" src="js/ng-smartable.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <toaster-container></toaster-container>
+    
+  </body>
+</html>

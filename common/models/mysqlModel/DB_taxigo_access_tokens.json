@@ -1,0 +1,60 @@
+{
+  "name": "DB_taxigo_access_tokens",
+  "options": {
+    "idInjection": false,
+    "mysql": {
+      "schema": "sans_taxigo",
+      "table": "taxigo_access_tokens"
+    }
+  },
+  "properties": {
+    "id": {
+      "type": "String",
+      "required": false,
+      "length": 255,
+      "id": 1,
+      "mysql": {
+        "columnName": "id",
+        "dataType": "varchar",
+        "dataLength": 255,
+        "nullable": "N"
+      }
+    },
+    "ttl": {
+      "type": "Number",
+      "required": false,
+      "precision": 22,
+      "mysql": {
+        "columnName": "ttl",
+        "dataType": "double",
+        "dataPrecision": 22,
+        "nullable": "Y"
+      }
+    },
+    "created": {
+      "type": "Date",
+      "required": false,
+      "mysql": {
+        "columnName": "created",
+        "dataType": "datetime",
+        "nullable": "Y"
+      }
+    },
+    "userId": {
+      "type": "Number",
+      "required": false,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "userId",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "Y"
+      }
+    }
+  },
+  "base": "PersistedModel",
+  "acls": [],
+  "relations": {}
+}

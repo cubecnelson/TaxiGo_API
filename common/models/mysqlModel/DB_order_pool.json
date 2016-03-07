@@ -1,0 +1,54 @@
+{
+  "name": "DB_order_pool",
+  "options": {
+    "idInjection": false,
+    "mysql": {
+      "schema": "sans_taxigo",
+      "table": "order_pool"
+    }
+  },
+  "properties": {
+    "order_id": {
+      "type": "Number",
+      "required": false,
+      "precision": 10,
+      "scale": 0,
+      "id": 1,
+      "mysql": {
+        "columnName": "order_id",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "driver_id": {
+      "type": "Number",
+      "required": false,
+      "precision": 10,
+      "scale": 0,
+      "id": 2,
+      "mysql": {
+        "columnName": "driver_id",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "distributor_status": {
+      "type": "String",
+      "required": false,
+      "length": 45,
+      "mysql": {
+        "columnName": "distributor_status",
+        "dataType": "varchar",
+        "dataLength": 45,
+        "nullable": "Y"
+      }
+    }
+  },
+  "base": "PersistedModel",
+  "acls": [],
+  "relations": {}
+}

@@ -1,0 +1,95 @@
+{
+  "name": "DB_taxigo_acl",
+  "options": {
+    "idInjection": false,
+    "mysql": {
+      "schema": "sans_taxigo",
+      "table": "taxigo_acl"
+    }
+  },
+  "properties": {
+    "id": {
+      "type": "Number",
+      "required": false,
+      "precision": 10,
+      "scale": 0,
+      "id": 1,
+      "mysql": {
+        "columnName": "id",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "model": {
+      "type": "String",
+      "required": false,
+      "length": 65535,
+      "mysql": {
+        "columnName": "model",
+        "dataType": "text",
+        "dataLength": 65535,
+        "nullable": "Y"
+      }
+    },
+    "property": {
+      "type": "String",
+      "required": false,
+      "length": 65535,
+      "mysql": {
+        "columnName": "property",
+        "dataType": "text",
+        "dataLength": 65535,
+        "nullable": "Y"
+      }
+    },
+    "accessType": {
+      "type": "String",
+      "required": false,
+      "length": 65535,
+      "mysql": {
+        "columnName": "accessType",
+        "dataType": "text",
+        "dataLength": 65535,
+        "nullable": "Y"
+      }
+    },
+    "permission": {
+      "type": "String",
+      "required": false,
+      "length": 65535,
+      "mysql": {
+        "columnName": "permission",
+        "dataType": "text",
+        "dataLength": 65535,
+        "nullable": "Y"
+      }
+    },
+    "principalType": {
+      "type": "String",
+      "required": false,
+      "length": 65535,
+      "mysql": {
+        "columnName": "principalType",
+        "dataType": "text",
+        "dataLength": 65535,
+        "nullable": "Y"
+      }
+    },
+    "principalId": {
+      "type": "String",
+      "required": false,
+      "length": 255,
+      "mysql": {
+        "columnName": "principalId",
+        "dataType": "varchar",
+        "dataLength": 255,
+        "nullable": "Y"
+      }
+    }
+  },
+  "base": "PersistedModel",
+  "acls": [],
+  "relations": {}
+}

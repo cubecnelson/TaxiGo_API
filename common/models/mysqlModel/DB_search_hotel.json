@@ -1,0 +1,139 @@
+{
+  "name": "DB_search_hotel",
+  "options": {
+    "idInjection": false,
+    "mysql": {
+      "schema": "sans_taxigo",
+      "table": "search_hotel"
+    }
+  },
+  "properties": {
+    "id": {
+      "type": "Number",
+      "required": false,
+      "precision": 10,
+      "scale": 0,
+      "id": 1,
+      "mysql": {
+        "columnName": "id",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "user_id": {
+      "type": "String",
+      "required": false,
+      "length": 10,
+      "mysql": {
+        "columnName": "user_id",
+        "dataType": "varchar",
+        "dataLength": 10,
+        "nullable": "N"
+      }
+    },
+    "place_id": {
+      "type": "String",
+      "required": false,
+      "length": 255,
+      "mysql": {
+        "columnName": "place_id",
+        "dataType": "varchar",
+        "dataLength": 255,
+        "nullable": "N"
+      }
+    },
+    "date": {
+      "type": "Date",
+      "required": false,
+      "mysql": {
+        "columnName": "date",
+        "dataType": "datetime",
+        "nullable": "N"
+      }
+    },
+    "first_desc": {
+      "type": "String",
+      "required": false,
+      "length": 255,
+      "mysql": {
+        "columnName": "first_desc",
+        "dataType": "varchar",
+        "dataLength": 255,
+        "nullable": "N"
+      }
+    },
+    "sec_desc": {
+      "type": "String",
+      "required": false,
+      "length": 255,
+      "mysql": {
+        "columnName": "sec_desc",
+        "dataType": "varchar",
+        "dataLength": 255,
+        "nullable": "N"
+      }
+    },
+    "loc_x": {
+      "type": "Number",
+      "required": false,
+      "precision": 22,
+      "mysql": {
+        "columnName": "loc_x",
+        "dataType": "double",
+        "dataPrecision": 22,
+        "nullable": "N"
+      }
+    },
+    "loc_y": {
+      "type": "Number",
+      "required": false,
+      "precision": 22,
+      "mysql": {
+        "columnName": "loc_y",
+        "dataType": "double",
+        "dataPrecision": 22,
+        "nullable": "N"
+      }
+    },
+    "reference_code": {
+      "type": "String",
+      "required": false,
+      "length": 65535,
+      "mysql": {
+        "columnName": "reference_code",
+        "dataType": "text",
+        "dataLength": 65535,
+        "nullable": "N"
+      }
+    },
+    "image": {
+      "type": "String",
+      "required": false,
+      "length": 200,
+      "mysql": {
+        "columnName": "image",
+        "dataType": "varchar",
+        "dataLength": 200,
+        "nullable": "N"
+      }
+    },
+    "sort": {
+      "type": "Number",
+      "required": false,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "sort",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    }
+  },
+  "base": "PersistedModel",
+  "acls": [],
+  "relations": {}
+}

@@ -1,0 +1,130 @@
+.web_container{
+	width:96%;
+	margin:0 2%;
+	/*max-width: 1500px;*/
+}
+
+.left{
+	float: left;
+}
+
+.select-list{
+	margin-bottom:20px;
+}
+
+.clearfloat{ clear:both; height:0; font-size: 1px; line-height: 0px; overflow: hidden }
+
+#order-wrap{
+	width:78%;
+	float:left;
+	padding-right:20px;
+	box-sizing: border-box;
+	
+}
+#driver-wrap{
+	width:22%;
+	float:left;
+	/*background: #aaa;*/
+}
+
+
+#driver-wrap .driver-list-wrap{
+	padding-bottom: 5px;
+	padding-top: 5px;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	border-bottom: 1px solid #ccc;
+}
+
+#driver-wrap .driver-list-wrap:hover,
+#driver-wrap .driver-list-wrap.active{
+	background: #EFFF79;
+	cursor: pointer;
+}
+
+#driver-wrap .page_title{
+
+}
+
+
+#order-wrap .order-list-wrap{
+	padding-bottom: 5px;
+	padding-top: 5px;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	border-bottom:1px solid #ccc;
+}
+
+#order-wrap .order-list-wrap:hover,
+#order-wrap .order-list-wrap.active{
+	background: #EFFF79;
+	cursor: pointer;
+}
+
+
+#order-wrap .ajax-wrap{
+	border-right:1px solid #ccc;
+	box-sizing: border-box;
+	padding-right:10px;
+}
+
+#waiting-order-wrap{
+	margin-top:50px;
+}
+
+#waiting-order-wrap .waiting-order-list-wrap {
+	padding-bottom: 5px;
+	padding-top: 5px;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	border-bottom:1px solid #ccc;
+}
+
+#waiting-normal-order-wrap{
+	margin-top:50px;
+}
+
+#waiting-normal-order-wrap .waiting-normal-order-list-wrap {
+	padding-bottom: 5px;
+	padding-top: 5px;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	border-bottom:1px solid #ccc;
+}
+
+
+#success-order-wrap{
+	margin-top:50px;
+}
+
+#success-order-wrap .success-order-list-wrap {
+	padding-bottom: 5px;
+	padding-top: 5px;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	border-bottom:1px solid #ccc;
+}
+
+#complete-order-wrap{
+	margin-top:50px;
+}
+
+#complete-order-wrap .complete-order-list-wrap {
+	padding-bottom: 5px;
+	padding-top: 5px;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	border-bottom:1px solid #ccc;
+}
+
+#cancel-order-wrap{
+	margin-top:50px;
+}
+
+#cancel-order-wrap .cancel-order-list-wrap {
+	padding-bottom: 5px;
+	padding-top: 5px;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	border-bottom:1px solid #ccc;
+}

@@ -1,0 +1,30 @@
+{
+  "name": "standardResponse",
+  "base": "TransientModel",
+  "strict": true,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "code": {
+      "default": "1",
+      "type": "string",
+      "comments": "Status code of the request"
+    },
+    "msg": {
+      "default": "Success",
+      "type": "string",
+      "comments": "Message returned"
+    },
+    "data": {
+      "type": "object",
+      "index": false,
+      "comments": "Data payload returned"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

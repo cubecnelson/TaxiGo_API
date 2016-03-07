@@ -1,0 +1,169 @@
+{
+  "name": "DB_view_distinct_mission_progress",
+  "options": {
+    "idInjection": false,
+    "mysql": {
+      "schema": "sans_taxigo",
+      "table": "view_distinct_mission_progress"
+    }
+  },
+  "properties": {
+    "id": {
+      "type": "Number",
+      "required": false,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "id",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "user_id": {
+      "type": "Number",
+      "required": false,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "user_id",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "mission_id": {
+      "type": "Number",
+      "required": false,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "mission_id",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "mission_trigger_id": {
+      "type": "Number",
+      "required": false,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "mission_trigger_id",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "progress_count": {
+      "type": "Number",
+      "required": false,
+      "precision": 22,
+      "mysql": {
+        "columnName": "progress_count",
+        "dataType": "double",
+        "dataPrecision": 22,
+        "nullable": "N"
+      }
+    },
+    "required_count": {
+      "type": "Number",
+      "required": false,
+      "precision": 22,
+      "mysql": {
+        "columnName": "required_count",
+        "dataType": "double",
+        "dataPrecision": 22,
+        "nullable": "N"
+      }
+    },
+    "last_update": {
+      "type": "Date",
+      "required": false,
+      "mysql": {
+        "columnName": "last_update",
+        "dataType": "datetime",
+        "nullable": "N"
+      }
+    },
+    "begining_timestamp": {
+      "type": "Date",
+      "required": false,
+      "mysql": {
+        "columnName": "begining_timestamp",
+        "dataType": "datetime",
+        "nullable": "N"
+      }
+    },
+    "completed": {
+      "type": "Number",
+      "required": false,
+      "precision": 3,
+      "scale": 0,
+      "mysql": {
+        "columnName": "completed",
+        "dataType": "tinyint",
+        "dataPrecision": 3,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "name": {
+      "type": "String",
+      "required": false,
+      "length": 45,
+      "mysql": {
+        "columnName": "name",
+        "dataType": "varchar",
+        "dataLength": 45,
+        "nullable": "Y"
+      }
+    },
+    "available_since": {
+      "type": "Date",
+      "required": false,
+      "mysql": {
+        "columnName": "available_since",
+        "dataType": "datetime",
+        "nullable": "Y"
+      }
+    },
+    "available_till": {
+      "type": "Date",
+      "required": false,
+      "mysql": {
+        "columnName": "available_till",
+        "dataType": "datetime",
+        "nullable": "Y"
+      }
+    },
+    "void_after": {
+      "type": "Date",
+      "required": false,
+      "mysql": {
+        "columnName": "void_after",
+        "dataType": "datetime",
+        "nullable": "Y"
+      }
+    },
+    "realm": {
+      "type": "String",
+      "required": false,
+      "length": 45,
+      "mysql": {
+        "columnName": "realm",
+        "dataType": "varchar",
+        "dataLength": 45,
+        "nullable": "Y"
+      }
+    }
+  },
+  "base": "PersistedModel",
+  "acls": [],
+  "relations": {}
+}

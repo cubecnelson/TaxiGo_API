@@ -1,0 +1,117 @@
+{
+  "name": "DB_logs_location",
+  "options": {
+    "idInjection": false,
+    "mysql": {
+      "schema": "sans_taxigo",
+      "table": "logs_location"
+    }
+  },
+  "properties": {
+    "id": {
+      "type": "Number",
+      "required": false,
+      "precision": 10,
+      "scale": 0,
+      "id": 1,
+      "mysql": {
+        "columnName": "id",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "loc_x": {
+      "type": "Number",
+      "required": false,
+      "precision": 22,
+      "mysql": {
+        "columnName": "loc_x",
+        "dataType": "double",
+        "dataPrecision": 22,
+        "nullable": "Y"
+      }
+    },
+    "loc_y": {
+      "type": "Number",
+      "required": false,
+      "precision": 22,
+      "mysql": {
+        "columnName": "loc_y",
+        "dataType": "double",
+        "dataPrecision": 22,
+        "nullable": "Y"
+      }
+    },
+    "brust_index": {
+      "type": "Number",
+      "required": false,
+      "precision": 22,
+      "mysql": {
+        "columnName": "brust_index",
+        "dataType": "double",
+        "dataPrecision": 22,
+        "nullable": "Y"
+      }
+    },
+    "place_id": {
+      "type": "String",
+      "required": false,
+      "length": 45,
+      "mysql": {
+        "columnName": "place_id",
+        "dataType": "varchar",
+        "dataLength": 45,
+        "nullable": "Y"
+      }
+    },
+    "raw_x": {
+      "type": "Number",
+      "required": false,
+      "precision": 22,
+      "mysql": {
+        "columnName": "raw_x",
+        "dataType": "double",
+        "dataPrecision": 22,
+        "nullable": "Y"
+      }
+    },
+    "raw_y": {
+      "type": "Number",
+      "required": false,
+      "precision": 22,
+      "mysql": {
+        "columnName": "raw_y",
+        "dataType": "double",
+        "dataPrecision": 22,
+        "nullable": "Y"
+      }
+    },
+    "time": {
+      "type": "Date",
+      "required": false,
+      "mysql": {
+        "columnName": "time",
+        "dataType": "datetime",
+        "nullable": "Y"
+      }
+    },
+    "user_id": {
+      "type": "Number",
+      "required": false,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "user_id",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "Y"
+      }
+    }
+  },
+  "base": "PersistedModel",
+  "acls": [],
+  "relations": {}
+}

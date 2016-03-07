@@ -1,0 +1,150 @@
+{
+  "name": "gifts",
+  "options": {
+    "idInjection": false,
+    "mysql": {
+      "schema": "sans_taxigo",
+      "table": "gifts"
+    }
+  },
+  "properties": {
+    "id": {
+      "type": "Number",
+      "required": false,
+      "precision": 10,
+      "scale": 0,
+      "id": 1,
+      "mysql": {
+        "columnName": "id",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "name": {
+      "type": "String",
+      "required": false,
+      "length": 45,
+      "mysql": {
+        "columnName": "name",
+        "dataType": "varchar",
+        "dataLength": 45,
+        "nullable": "N"
+      }
+    },
+    "quantity": {
+      "type": "Number",
+      "required": false,
+      "precision": 22,
+      "mysql": {
+        "columnName": "quantity",
+        "dataType": "double",
+        "dataPrecision": 22,
+        "nullable": "N"
+      }
+    },
+    "cost": {
+      "type": "Number",
+      "required": false,
+      "precision": 22,
+      "mysql": {
+        "columnName": "cost",
+        "dataType": "double",
+        "dataPrecision": 22,
+        "nullable": "N"
+      }
+    },
+    "available_since": {
+      "type": "Date",
+      "required": false,
+      "mysql": {
+        "columnName": "available_since",
+        "dataType": "datetime",
+        "nullable": "N"
+      }
+    },
+    "available_till": {
+      "type": "Date",
+      "required": false,
+      "mysql": {
+        "columnName": "available_till",
+        "dataType": "datetime",
+        "nullable": "N"
+      }
+    },
+    "void_after": {
+      "type": "Date",
+      "required": false,
+      "mysql": {
+        "columnName": "void_after",
+        "dataType": "datetime",
+        "nullable": "N"
+      }
+    },
+    "realm": {
+      "type": "String",
+      "required": false,
+      "length": 45,
+      "mysql": {
+        "columnName": "realm",
+        "dataType": "varchar",
+        "dataLength": 45,
+        "nullable": "N"
+      }
+    },
+    "image": {
+      "type": "String",
+      "required": false,
+      "length": 512,
+      "mysql": {
+        "columnName": "image",
+        "dataType": "varchar",
+        "dataLength": 512,
+        "nullable": "N"
+      }
+    },
+    "detail_descriptions": {
+      "type": "String",
+      "required": false,
+      "length": 65535,
+      "mysql": {
+        "columnName": "detail_descriptions",
+        "dataType": "text",
+        "dataLength": 65535,
+        "nullable": "N"
+      }
+    },
+    "icon": {
+      "type": "String",
+      "required": false,
+      "length": 512,
+      "mysql": {
+        "columnName": "icon",
+        "dataType": "varchar",
+        "dataLength": 512,
+        "nullable": "Y"
+      }
+    }
+  },
+  "acls":[
+    {
+      "principalType": "ROLE",
+      "principalId": "$unauthenticated",
+      "permission": "DENY"
+    },
+    { 
+      "accessType": "WRITE",
+      "principalType": "ROLE",
+      "principalId": "$unauthenticated",
+      "permission": "DENY"
+    },
+    { 
+      "accessType": "WRITE",
+      "principalType": "ROLE",
+      "principalId": "admin",
+      "permission": "ALLOW"
+    }
+  ],
+  "base": "PersistedModel"
+}

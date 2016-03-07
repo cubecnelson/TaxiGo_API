@@ -1,0 +1,51 @@
+{
+  "name": "TaxiGoConfig",
+  "base": "PersistedModel",
+  "options": {
+    "idInjection": false,
+    "mysql": {
+      "schema": "sans_taxigo",
+      "table": "config"
+    }
+  },
+  "properties": {
+    "key": {
+      "type": "String",
+      "id": 1,
+      "required": false,
+      "length": 255,
+      "mysql": {
+        "columnName": "key",
+        "dataType": "varchar",
+        "dataLength": 255,
+        "nullable": "N"
+      }
+    },
+    "value": {
+      "type": "String",
+      "required": false,
+      "length": 1024,
+      "mysql": {
+        "columnName": "value",
+        "dataType": "varchar",
+        "dataLength": 1024,
+        "nullable": "Y"
+      }
+    },
+    "label": {
+      "type": "String",
+      "required": false,
+      "length": 45,
+      "mysql": {
+        "columnName": "label",
+        "dataType": "varchar",
+        "dataLength": 45,
+        "nullable": "Y"
+      }
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

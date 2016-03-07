@@ -1,0 +1,21 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "sans_taxigo": {
+    "host": "",
+    "port": "",
+    "database": "",
+    "username": "",
+    "password": "",
+    "name": "",
+    "connector": "mysql"
+  },
+  "publicFiles":{
+    "name":"publicFiles",
+    "provider":"fileSystem",
+    "connector":"loopback-component-storage",
+    "root":"client/public/"
+  }
+}

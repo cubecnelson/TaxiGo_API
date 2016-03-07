@@ -1,0 +1,19 @@
+<div id="wrapper">
+    <nav id="header-nav" class="navbar navbar-default navbar-static-top" role="navigation">
+        <span compile="::appController.header">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" ng-click="isCollapsed = !isCollapsed">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" ng-click="appController.displayHome()" class="navbar-brand">{{ ::appController.applicationName }}</a>
+        </div>
+        </span>
+        <ma-menu-bar menu="::appController.menu"></ma-menu-bar>
+    </nav>
+    <div id="page-wrapper" class="mywrapper" style="min-height: 640px;">
+        <div class="view-body" ui-view style="height:100%;"></div>
+    </div>
+    <div id="loader"></div>
+</div>

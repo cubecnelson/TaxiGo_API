@@ -1,0 +1,133 @@
+{
+  "name": "gift_redeem",
+  "options": {
+    "idInjection": false,
+    "mysql": {
+      "schema": "sans_taxigo",
+      "table": "gift_redeem"
+    }
+  },
+  "properties": {
+    "id": {
+      "type": "Number",
+      "required": false,
+      "precision": 10,
+      "scale": 0,
+      "id": 1,
+      "mysql": {
+        "columnName": "id",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "gift_id": {
+      "type": "Number",
+      "required": false,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "gift_id",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "user_id": {
+      "type": "Number",
+      "required": false,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "user_id",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "timestamp": {
+      "type": "Date",
+      "required": false,
+      "mysql": {
+        "columnName": "timestamp",
+        "dataType": "timestamp",
+        "nullable": "N"
+      }
+    },
+    "redeem_datetime": {
+      "type": "Date",
+      "required": false,
+      "mysql": {
+        "columnName": "redeem_datetime",
+        "dataType": "datetime",
+        "nullable": "N"
+      }
+    },
+    "cost": {
+      "type": "Number",
+      "required": false,
+      "precision": 22,
+      "mysql": {
+        "columnName": "cost",
+        "dataType": "double",
+        "dataPrecision": 22,
+        "nullable": "Y"
+      }
+    },
+    "redeem_type": {
+      "type": "String",
+      "required": false,
+      "length": 45,
+      "mysql": {
+        "columnName": "redeem_type",
+        "dataType": "varchar",
+        "dataLength": 45,
+        "nullable": "N"
+      }
+    },
+    "exchange_datetime": {
+      "type": "Date",
+      "required": false,
+      "mysql": {
+        "columnName": "exchange_datetime",
+        "dataType": "datetime",
+        "nullable": "N"
+      }
+    }
+  },
+  "relations": {
+    "gift": {
+      "type": "belongsTo",
+      "model": "gifts",
+      "foreignKey": "gift_id"
+    },
+    "user": {
+      "type": "belongsTo",
+      "model": "taxiGoUsers",
+      "foreignKey": "user_id"
+    }
+  },
+  "base": "PersistedModel",
+  "acls":[
+    {
+      "principalType": "ROLE",
+      "principalId": "$unauthenticated",
+      "permission": "DENY"
+    },
+    { 
+      "accessType": "WRITE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    },
+    { 
+      "accessType": "WRITE",
+      "principalType": "ROLE",
+      "principalId": "admin",
+      "permission": "ALLOW"
+    }
+  ]
+}

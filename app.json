@@ -1,0 +1,27 @@
+{
+  "name"             : "taxigo-api",
+  "cwd"              : "./",
+  // "args"             : ["--toto=heya coco", "-d", "1"],
+  "script"           : "server/server.js",
+  // "node_args"        : ["--harmony", " --max-stack-size=102400000"],
+  "log_date_format"  : "YYYY-MM-DD HH:mm Z",
+  // "error_file"       : "/var/log/node-app/node-app.stderr.log",
+  // "out_file"         : "log/node-app.stdout.log",
+  // "pid_file"         : "pids/node-geo-api.pid",
+  "instances"        : 0, //or 0 => 'max'
+  "min_uptime"       : "200s", // 200 seconds, defaults to 1000
+  "max_restarts"     : 10, // defaults to 15
+  "max_memory_restart": "1G", // 1 megabytes, e.g.: "2G", "10M", "100K", 1024 the default unit is byte.
+  "watch"            : true,
+  "ignore_watch"      : ["[\\/\\\\]\\./", "node_modules",".sql$","client/","bower_components"],
+  "merge_logs"       : true,
+  "exec_interpreter" : "node",
+  "exec_mode"        : "cluster",
+  "autorestart"      : true, // enable/disable automatic restart when an app crashes or exits
+  "vizion"           : false, // enable/disable vizion features (versioning control)
+  "env": {
+    // "NODE_ENV": "production",
+    "DEBUG": "loopback:component:push,loopback:component:push:*,apn",
+    "AWESOME_SERVICE_API_TOKEN": "xxx"
+  }
+}

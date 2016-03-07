@@ -1,0 +1,14 @@
+{
+  "name": "order",
+  "plural": "order",
+  "base": "TransientModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {},
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

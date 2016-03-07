@@ -1,0 +1,169 @@
+{
+  "name": "DB_mission_progress",
+  "options": {
+    "idInjection": false,
+    "mysql": {
+      "schema": "sans_taxigo",
+      "table": "mission_progress"
+    }
+  },
+  "properties": {
+    "id": {
+      "type": "Number",
+      "required": false,
+      "precision": 10,
+      "scale": 0,
+      "id": 1,
+      "mysql": {
+        "columnName": "id",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "user_id": {
+      "type": "Number",
+      "required": false,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "user_id",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "mission_id": {
+      "type": "Number",
+      "required": false,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "mission_id",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "mission_trigger_id": {
+      "type": "Number",
+      "required": false,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "mission_trigger_id",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "progress_count": {
+      "type": "Number",
+      "required": false,
+      "precision": 22,
+      "mysql": {
+        "columnName": "progress_count",
+        "dataType": "double",
+        "dataPrecision": 22,
+        "nullable": "N"
+      }
+    },
+    "required_count": {
+      "type": "Number",
+      "required": false,
+      "precision": 22,
+      "mysql": {
+        "columnName": "required_count",
+        "dataType": "double",
+        "dataPrecision": 22,
+        "nullable": "N"
+      }
+    },
+    "last_update": {
+      "type": "Date",
+      "required": false,
+      "mysql": {
+        "columnName": "last_update",
+        "dataType": "datetime",
+        "nullable": "N"
+      }
+    },
+    "begining_timestamp": {
+      "type": "Date",
+      "required": false,
+      "mysql": {
+        "columnName": "begining_timestamp",
+        "dataType": "datetime",
+        "nullable": "N"
+      }
+    },
+    "completed": {
+      "type": "Number",
+      "required": false,
+      "precision": 3,
+      "scale": 0,
+      "mysql": {
+        "columnName": "completed",
+        "dataType": "tinyint",
+        "dataPrecision": 3,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "mission_name": {
+      "type": "String",
+      "required": false,
+      "length": 45,
+      "mysql": {
+        "columnName": "mission_name",
+        "dataType": "varchar",
+        "dataLength": 45,
+        "nullable": "N"
+      }
+    },
+    "gift_id": {
+      "type": "Number",
+      "required": false,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "gift_id",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "Y"
+      }
+    },
+    "gift_points": {
+      "type": "Number",
+      "required": false,
+      "precision": 22,
+      "mysql": {
+        "columnName": "gift_points",
+        "dataType": "double",
+        "dataPrecision": 22,
+        "nullable": "Y"
+      }
+    },
+    "gift_redeem_id": {
+      "type": "Number",
+      "required": false,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "gift_redeem_id",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "Y"
+      }
+    }
+  },
+  "base": "PersistedModel",
+  "acls": [],
+  "relations": {}
+}

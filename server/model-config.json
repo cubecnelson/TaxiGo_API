@@ -1,0 +1,303 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback-component-push/common/models",
+      "loopback/server/models",
+      "../common/models/mysqlModel",
+      "../common/models/communicationModel",
+      "../common/models/gifts-and-missions",
+      "../common/models/order-distributor",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "db",
+    "public": false
+  },
+  "AccessToken": {
+    "dataSource": "sans_taxigo",
+    "public": false,
+    "options": {
+      "mysql": {
+        "schema": "sans_taxigo",
+        "table": "taxigo_access_tokens"
+      }
+    }
+  },
+  "AdminTools": {
+    "dataSource": null,
+    "public": true
+  },
+  "ACL": {
+    "dataSource": "sans_taxigo",
+    "public": false,
+    "options": {
+      "mysql": {
+        "schema": "sans_taxigo",
+        "table": "taxigo_acl"
+      }
+    }
+  },
+  "RoleMapping": {
+    "dataSource": "sans_taxigo",
+    "public": false,
+    "options": {
+      "mysql": {
+        "schema": "sans_taxigo",
+        "table": "taxigo_role_mappings"
+      }
+    }
+  },
+  "Role": {
+    "dataSource": "sans_taxigo",
+    "public": false,
+    "options": {
+      "mysql": {
+        "schema": "sans_taxigo",
+        "table": "taxigo_roles"
+      }
+    }
+  },
+  "missions": {
+    "dataSource": "sans_taxigo",
+    "public": true
+  },
+  "member": {
+    "dataSource": "sans_taxigo",
+    "public": true
+  },
+  "OrderDistributor": {
+    "dataSource": null,
+    "public": true
+  },
+  "driver": {
+    "dataSource": "sans_taxigo",
+    "public": true
+  },
+  "gifts": {
+    "dataSource": "sans_taxigo",
+    "public": true
+  },
+  "history": {
+    "dataSource": null,
+    "public": true
+  },
+  "order": {
+    "dataSource": null,
+    "public": true
+  },
+  "location": {
+    "dataSource": null,
+    "public": true
+  },
+  "standardResponse": {
+    "dataSource": null,
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "taxiGoUsers": {
+    "dataSource": "sans_taxigo",
+    "public": true,
+    "options": {
+      "realmRequired": true,
+      "realmDelimiter": ":"
+    }
+  },
+  "news": {
+    "dataSource": "sans_taxigo",
+    "public": true
+  },
+  "DB_snap_log": {
+    "dataSource": "sans_taxigo",
+    "public": false
+  },
+  "DB_search_log": {
+    "dataSource": "sans_taxigo",
+    "public": false
+  },
+  "DB_search_hotel": {
+    "dataSource": "sans_taxigo",
+    "public": false
+  },
+  "DB_search_home": {
+    "dataSource": "sans_taxigo",
+    "public": false
+  },
+  "DB_search_company": {
+    "dataSource": "sans_taxigo",
+    "public": false
+  },
+  "DB_passenger_order": {
+    "dataSource": "sans_taxigo",
+    "public": false
+  },
+  "DB_passenger": {
+    "dataSource": "sans_taxigo",
+    "public": false
+  },
+  "DB_driver": {
+    "dataSource": "sans_taxigo",
+    "public": false
+  },
+  "DB_api_log": {
+    "dataSource": "sans_taxigo",
+    "public": false
+  },
+  "DB_order_pool": {
+    "dataSource": "sans_taxigo",
+    "public": false
+  },
+  "DB_view_waiting_orders": {
+    "dataSource": "sans_taxigo",
+    "public": false
+  },
+  "DB_view_success_orders": {
+    "dataSource": "sans_taxigo",
+    "public": false
+  },
+  "DB_view_normal_orders": {
+    "dataSource": "sans_taxigo",
+    "public": false
+  },
+  "DB_view_complete_orders": {
+    "dataSource": "sans_taxigo",
+    "public": false
+  },
+  "DB_view_avaliable_orders": {
+    "dataSource": "sans_taxigo",
+    "public": false
+  },
+  "DB_logs_redeem": {
+    "dataSource": "sans_taxigo",
+    "public": false
+  },
+  "DB_missions": {
+    "dataSource": "sans_taxigo",
+    "public": false
+  },
+  "DB_gifts": {
+    "dataSource": "sans_taxigo",
+    "public": false
+  },
+  "mission_progress": {
+    "dataSource": "sans_taxigo",
+    "public": true
+  },
+  "logs_redeem": {
+    "dataSource": "sans_taxigo",
+    "public": true
+  },
+  "gift_redeem": {
+    "dataSource": "sans_taxigo",
+    "public": true
+  },
+  "view_distinct_mission_progress": {
+    "dataSource": "sans_taxigo",
+    "public": true
+  },
+  "order_pool": {
+    "dataSource": "sans_taxigo",
+    "public": false
+  },
+  "logs_order_distributor": {
+    "dataSource": "sans_taxigo",
+    "public": false
+  },
+  "DB_gift_redeem": {
+    "dataSource": "sans_taxigo",
+    "public": false
+  },
+  "DB_logs_order_distributor": {
+    "dataSource": "sans_taxigo",
+    "public": false
+  },
+  "DB_mission_progress": {
+    "dataSource": "sans_taxigo",
+    "public": false
+  },
+  "DB_news": {
+    "dataSource": "sans_taxigo",
+    "public": false
+  },
+  "DB_taxigo_access_tokens": {
+    "dataSource": "sans_taxigo",
+    "public": false
+  },
+  "DB_taxigo_acl": {
+    "dataSource": "sans_taxigo",
+    "public": false
+  },
+  "DB_taxigo_role_mappings": {
+    "dataSource": "sans_taxigo",
+    "public": false
+  },
+  "DB_taxigo_roles": {
+    "dataSource": "sans_taxigo",
+    "public": false
+  },
+  "DB_taxigouser": {
+    "dataSource": "sans_taxigo",
+    "public": false
+  },
+  "DB_view_cancel_orders": {
+    "dataSource": "sans_taxigo",
+    "public": false
+  },
+  "DB_view_distinct_mission_progress": {
+    "dataSource": "sans_taxigo",
+    "public": false
+  },
+  "DB_view_order": {
+    "dataSource": "sans_taxigo",
+    "public": false
+  },
+  "PublicContainer": {
+    "dataSource": "publicFiles",
+    "public": true
+  },
+  "DB_view_order_distributor": {
+    "dataSource": "sans_taxigo",
+    "public": false
+  },
+  "DB_view_order_driver": {
+    "dataSource": "sans_taxigo",
+    "public": false
+  },
+  "DB_config": {
+    "dataSource": "sans_taxigo",
+    "public": false
+  },
+  "DB_logs_location": {
+    "dataSource": "sans_taxigo",
+    "public": false
+  },
+  "AlertMail": {
+    "dataSource": "alertMail",
+    "public": false
+  },
+  "notification": {
+    "dataSource": "mongo-push",
+    "public": true
+  },
+  "application": {
+    "dataSource": "mongo-push",
+    "public": true
+  },
+  "installation": {
+    "dataSource": "mongo-push",
+    "public": true
+  },
+  "push": {
+    "public": true,
+    "dataSource": "push"
+  }
+}

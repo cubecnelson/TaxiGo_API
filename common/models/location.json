@@ -1,0 +1,14 @@
+{
+  "name": "location",
+  "plural": "location",
+  "base": "TransientModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {},
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
